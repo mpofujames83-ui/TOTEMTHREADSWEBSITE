@@ -1,0 +1,3935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TOTEM THREADS | Wear Your Totem. Honour Your Heritage.</title>
+
+  <meta
+    name="description"
+    content="TOTEM THREADS creates premium custom T-shirts inspired by African totems, surnames, animals, family identity and heritage."
+  />
+
+  <meta name="theme-color" content="#17130f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --black: #0d0b09;
+      --dark: #17130f;
+      --brown: #6f4e37;
+      --brown-dark: #4b3324;
+      --gold: #c58b2a;
+      --gold-light: #e2b65c;
+      --cream: #f7f4ed;
+      --cream-dark: #ebe5d8;
+      --white: #ffffff;
+      --muted: #8d877f;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 25px 70px rgba(0,0,0,0.18);
+      --radius: 22px;
+      --max: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(13, 11, 9, 0.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      color: var(--white);
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--gold-light);
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-top: -3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #ddd7cf;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cart-btn,
+    .menu-btn {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: transparent;
+      color: white;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+    }
+
+    .cart-btn:hover {
+      border-color: var(--gold);
+    }
+
+    .cart-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      margin-left: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 22px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(8,6,5,.9) 0%, rgba(8,6,5,.72) 42%, rgba(8,6,5,.3) 100%),
+        url("images/ncube.png") center 42%/cover no-repeat;
+      color: white;
+      padding-top: 82px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 150px;
+      background: linear-gradient(transparent, var(--cream));
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(55px, 9vw, 118px);
+      line-height: .88;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      max-width: 570px;
+      color: #e5ded5;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 25px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.35);
+      color: white;
+      background: rgba(255,255,255,.04);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       TICKER
+    ========================= */
+
+    .ticker {
+      background: var(--dark);
+      color: var(--gold-light);
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 1px solid rgba(197,139,42,.2);
+      border-bottom: 1px solid rgba(197,139,42,.2);
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 50px;
+      width: max-content;
+      padding: 17px 0;
+      animation: ticker 25s linear infinite;
+    }
+
+    .ticker-item {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .ticker-item::after {
+      content: "◆";
+      margin-left: 50px;
+      color: var(--brown);
+    }
+
+    @keyframes ticker {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .ticker--totems,
+    .ticker--families {
+      position: relative;
+      border: 0;
+      isolation: isolate;
+    }
+
+    .ticker--totems {
+      background: linear-gradient(105deg, #17130f, #292017 50%, #17130f);
+      color: #f0c96d;
+    }
+
+    .ticker--families {
+      background: linear-gradient(105deg, #e9dfce, #f7f2e8 50%, #e9dfce);
+      color: #513c2a;
+      border-top: 1px solid rgba(111, 78, 55, .18);
+      border-bottom: 1px solid rgba(111, 78, 55, .18);
+    }
+
+    .ticker--totems::before,
+    .ticker--families::before,
+    .ticker--totems::after,
+    .ticker--families::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      width: clamp(24px, 6vw, 88px);
+      content: "";
+      pointer-events: none;
+    }
+
+    .ticker--totems::before {
+      left: 0;
+      background: linear-gradient(90deg, #17130f, transparent);
+    }
+
+    .ticker--totems::after {
+      right: 0;
+      background: linear-gradient(270deg, #17130f, transparent);
+    }
+
+    .ticker--families::before {
+      left: 0;
+      background: linear-gradient(90deg, #e9dfce, transparent);
+    }
+
+    .ticker--families::after {
+      right: 0;
+      background: linear-gradient(270deg, #e9dfce, transparent);
+    }
+
+    .ticker--totems .ticker-track,
+    .ticker--families .ticker-track {
+      display: flex;
+      width: max-content;
+      gap: 0;
+      padding: 18px 0;
+      animation: ticker-left 34s linear infinite;
+      will-change: transform;
+    }
+
+    .ticker--families .ticker-track {
+      animation-name: ticker-right;
+      animation-duration: 42s;
+    }
+
+    .ticker--totems:hover .ticker-track,
+    .ticker--families:hover .ticker-track,
+    .ticker--totems:focus-within .ticker-track,
+    .ticker--families:focus-within .ticker-track {
+      animation-play-state: paused;
+    }
+
+    .ticker--totems .ticker-group,
+    .ticker--families .ticker-group {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: clamp(26px, 4vw, 56px);
+      padding-right: clamp(26px, 4vw, 56px);
+    }
+
+    .ticker--totems .ticker-item,
+    .ticker--families .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(26px, 4vw, 56px);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      transition: color .25s ease, transform .25s ease;
+    }
+
+    .ticker--totems .ticker-item::after,
+    .ticker--families .ticker-item::after {
+      content: "✦";
+      color: var(--gold-light);
+      font-size: 14px;
+    }
+
+    .ticker--families .ticker-item::after {
+      color: var(--brown);
+    }
+
+    .ticker--totems .ticker-item:hover {
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .ticker--families .ticker-item:hover {
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    @keyframes ticker-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes ticker-right {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: #746d64;
+      font-size: 16px;
+    }
+
+    /* =========================
+       COLLECTION
+    ========================= */
+
+    .collection {
+      background: var(--cream);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(23,19,15,.06);
+      transition: .4s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      height: 440px;
+      position: relative;
+      overflow: hidden;
+      background: #ded8cc;
+    }
+
+    .product-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: .6s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: var(--dark);
+      color: var(--gold-light);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .view-image-btn {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 999px;
+      background: rgba(23, 19, 15, .88);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      backdrop-filter: blur(8px);
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .view-image-btn:hover {
+      transform: translateY(-2px);
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .image-viewer {
+      width: min(1100px, 94vw);
+      max-width: none;
+      max-height: 94vh;
+      margin: auto;
+      padding: 0;
+      overflow: visible;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 16px;
+      background: #17130f;
+      color: white;
+    }
+
+    .image-viewer::backdrop {
+      background: rgba(0, 0, 0, .88);
+      backdrop-filter: blur(5px);
+    }
+
+    .image-viewer-content {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      margin: 0;
+      padding: 18px;
+    }
+
+    .image-viewer img {
+      width: auto;
+      max-width: 100%;
+      max-height: calc(94vh - 76px);
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .image-viewer figcaption {
+      padding-top: 14px;
+      color: #e2b65c;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .image-viewer-close {
+      position: absolute;
+      top: 26px;
+      right: 26px;
+      z-index: 1;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 50%;
+      background: rgba(13, 11, 9, .8);
+      color: white;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .image-viewer-close:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .product-info {
+      padding: 23px;
+    }
+
+    .product-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin-bottom: 7px;
+    }
+
+    .product-info p {
+      color: #777168;
+      font-size: 13px;
+      min-height: 42px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .price {
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .add-btn {
+      border: none;
+      background: var(--dark);
+      color: white;
+      border-radius: 999px;
+      padding: 11px 17px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .add-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* =========================
+       TOTEMS
+    ========================= */
+
+    .totems {
+      background: var(--dark);
+      color: white;
+    }
+
+    .totems .section-heading p {
+      color: #aaa39a;
+    }
+
+    .totem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .totem-card {
+      min-height: 450px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .totem-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .totem-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .totem-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px;
+      background: linear-gradient(transparent 25%, rgba(0,0,0,.95));
+    }
+
+    .totem-number {
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .totem-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      line-height: 1.1;
+    }
+
+    .totem-card p {
+      color: #d0cbc4;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .totem-card:hover .totem-overlay {
+      background: linear-gradient(transparent 15%, rgba(0,0,0,.98));
+    }
+
+    /* =========================
+       CUSTOM STUDIO
+    ========================= */
+
+    .studio {
+      background: var(--brown);
+      color: white;
+    }
+
+    .studio-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .studio-text h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    .studio-text p {
+      color: #e6d9cc;
+      margin-bottom: 30px;
+    }
+
+    .studio-points {
+      display: grid;
+      gap: 13px;
+    }
+
+    .studio-point {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: #f2e9df;
+      font-size: 13px;
+    }
+
+    .studio-point span {
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-size: 10px;
+    }
+
+    .form-card {
+      background: var(--cream);
+      color: var(--dark);
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      margin-bottom: 7px;
+    }
+
+    .form-card > p {
+      color: #777168;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #ddd5c9;
+      background: white;
+      border-radius: 10px;
+      padding: 13px;
+      outline: none;
+      color: var(--dark);
+    }
+
+    .field textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-submit {
+      width: 100%;
+      border: none;
+      margin-top: 18px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 620px;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .about-content > p {
+      color: #746d64;
+      margin-bottom: 25px;
+    }
+
+    .owners {
+      padding: 20px;
+      border-left: 3px solid var(--gold);
+      background: #eee9df;
+      margin-top: 30px;
+    }
+
+    .owners strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .owners span {
+      color: #776f65;
+      font-size: 12px;
+    }
+
+    /* =========================
+       STATEMENT
+    ========================= */
+
+    .statement {
+      background:
+        linear-gradient(rgba(13,11,9,.84), rgba(13,11,9,.84)),
+        url("images/zaa.png") center/cover fixed;
+      color: white;
+      text-align: center;
+    }
+
+    .statement-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .statement h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .statement h2 span {
+      color: var(--gold-light);
+    }
+
+    .statement p {
+      color: #c7c0b8;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+    }
+
+    .contact-left h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 56px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .contact-left > p {
+      color: #777168;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      margin-bottom: 22px;
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .contact-item strong {
+      font-size: 15px;
+    }
+
+    .contact-box {
+      background: var(--dark);
+      color: white;
+      border-radius: 25px;
+      padding: 40px;
+    }
+
+    .contact-box h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 33px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #aaa39a;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0a0807;
+      color: white;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    footer .brand-text {
+      font-size: 22px;
+    }
+
+    .footer-about {
+      color: #89837c;
+      font-size: 13px;
+      max-width: 330px;
+      margin-top: 17px;
+    }
+
+    .footer-column h4 {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #99928a;
+      font-size: 13px;
+      margin-bottom: 10px;
+      transition: .3s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 23px;
+      color: #706b65;
+      font-size: 11px;
+    }
+
+    /* =========================
+       CART
+    ========================= */
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.65);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1500;
+      transition: .3s;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: min(430px, 92vw);
+      height: 100vh;
+      background: var(--cream);
+      z-index: 1600;
+      transition: .4s;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -20px 0 60px rgba(0,0,0,.25);
+    }
+
+    .cart-panel.active {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd5ca;
+    }
+
+    .cart-header h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+    }
+
+    .close-btn {
+      width: 38px;
+      height: 38px;
+      border: 1px solid #d6cfc5;
+      background: transparent;
+      border-radius: 50%;
+      font-size: 20px;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      color: #777168;
+      padding: 80px 20px;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 13px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #ddd5ca;
+    }
+
+    .cart-item-image {
+      height: 75px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ddd5ca;
+    }
+
+    .cart-item-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .cart-item-price {
+      font-size: 12px;
+      color: #777168;
+      margin-bottom: 9px;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .qty-controls button {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc4b8;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .qty-controls span {
+      min-width: 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .remove-item {
+      border: none;
+      background: transparent;
+      color: #9b6757;
+      font-size: 10px;
+      margin-top: 8px;
+      padding: 0;
+    }
+
+    .cart-footer {
+      padding: 22px;
+      border-top: 1px solid #ddd5ca;
+      background: white;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    .summary-row.total {
+      font-size: 18px;
+      font-weight: 800;
+      padding-top: 12px;
+      border-top: 1px solid #ddd5ca;
+      margin-top: 10px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      border: none;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       CHECKOUT MODAL
+    ========================= */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.72);
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      width: min(520px, 100%);
+      background: var(--cream);
+      border-radius: 25px;
+      padding: 35px;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: translateY(20px);
+      transition: .3s;
+    }
+
+    .modal.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .modal-top h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+    }
+
+    .checkout-summary {
+      background: white;
+      padding: 18px;
+      border-radius: 13px;
+      margin-bottom: 20px;
+    }
+
+    .payment-options {
+      display: grid;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .payment-option {
+      border: 1px solid #d9d1c5;
+      background: white;
+      padding: 13px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .payment-option input {
+      accent-color: var(--gold);
+    }
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 3000;
+      background: var(--dark);
+      color: white;
+      padding: 14px 18px;
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      font-size: 12px;
+      transform: translateY(30px);
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* =========================
+       SCROLL TOP
+    ========================= */
+
+    .scroll-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 45px;
+      height: 45px;
+      border: 1px solid var(--gold);
+      background: var(--dark);
+      color: var(--gold-light);
+      border-radius: 50%;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1000px) {
+      nav {
+        gap: 17px;
+      }
+
+      .totem-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .studio-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 500px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        min-height: 70px;
+      }
+
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--dark);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 6%;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+      }
+
+      nav.open {
+        max-height: 420px;
+        padding-bottom: 20px;
+      }
+
+      nav a {
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(213, 18, 18, 0.08);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-actions {
+        margin-left: auto;
+      }
+
+      .nav-actions .cart-btn {
+        padding: 0 12px;
+      }
+
+      .hero {
+        min-height: 820px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .products,
+      .totem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 430px;
+      }
+
+      .totem-card {
+        min-height: 430px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .form-card {
+        padding: 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .contact-left h2 {
+        font-size: 45px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .brand-text {
+        font-size: 15px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .cart-btn {
+        font-size: 0;
+      }
+
+      .cart-btn .cart-count {
+        font-size: 11px;
+        margin-left: 0;
+      }
+
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* Refined storefront details */
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    header {
+      background: rgba(13, 11, 9, .92);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
+    }
+
+    .navbar {
+      min-height: 78px;
+    }
+
+    nav a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 1px;
+      background: var(--gold-light);
+      transition: right .25s ease;
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after {
+      right: 0;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 4px;
+    }
+
+    .hero {
+      min-height: min(860px, 100svh);
+      padding-top: 78px;
+      background-color: var(--dark);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(58px, 9vw, 112px);
+      letter-spacing: -.055em;
+      line-height: .94;
+    }
+
+    .hero p {
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .btn {
+      min-height: 54px;
+      padding-inline: 28px;
+      letter-spacing: .025em;
+    }
+
+    section {
+      padding-block: clamp(76px, 9vw, 112px);
+    }
+
+    .section-heading {
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .studio-text h2,
+    .contact-left h2 {
+      letter-spacing: -.035em;
+    }
+
+    .collection {
+      background: linear-gradient(180deg, #fbf9f4 0%, var(--cream) 100%);
+    }
+
+    .products {
+      gap: 26px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(23, 19, 15, .06);
+      box-shadow: 0 12px 35px rgba(23, 19, 15, .07);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 50px rgba(23, 19, 15, .13);
+    }
+
+    .product-image {
+      height: clamp(320px, 35vw, 440px);
+      background: #e9e4da;
+    }
+
+    .product-image img {
+      object-position: center;
+    }
+
+    .product-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 25px;
+    }
+
+    .product-info p {
+      line-height: 1.7;
+    }
+
+    .product-bottom {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .add-btn {
+      min-height: 44px;
+      padding-inline: 20px;
+      letter-spacing: .06em;
+    }
+
+    .totem-card,
+    .form-card,
+    .contact-box,
+    .about-image {
+      border-radius: 18px;
+    }
+
+    .totem-card {
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .2);
+    }
+
+    .about {
+      background: #fbf9f4;
+    }
+
+    .about-image {
+      position: relative;
+      background: var(--cream-dark);
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      object-position: center;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(197, 139, 42, .14);
+    }
+
+    .cart-panel,
+    .modal-card {
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
+    }
+
+    .scroll-top {
+      bottom: 24px;
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        min-height: 70px;
+      }
+
+      nav {
+        top: 70px;
+        background: rgba(23, 19, 15, .98);
+      }
+
+      nav a {
+        padding-block: 13px;
+        border-bottom-color: rgba(255, 255, 255, .08);
+      }
+
+      .hero {
+        min-height: 760px;
+        background-position: 58% center;
+      }
+
+      .hero-content {
+        max-width: 620px;
+      }
+
+      .product-image {
+        height: min(112vw, 470px);
+      }
+
+      .about-image {
+        height: min(115vw, 500px);
+      }
+
+      .statement {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .ticker--totems .ticker-track,
+      .ticker--families .ticker-track {
+        width: 100%;
+        justify-content: center;
+        animation: none;
+      }
+
+      .ticker--totems .ticker-group[aria-hidden="true"],
+      .ticker--families .ticker-group[aria-hidden="true"] {
+        display: none;
+      }
+
+      .ticker--totems .ticker-group,
+      .ticker--families .ticker-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">
+        <img src="images/logo.png" alt="TOTEM THREADS Logo">
+        <div class="brand-text">
+          TOTEM THREADS
+          <span>WEAR YOUR HERITAGE</span>
+        </div>
+      </a>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#totems">Totems</a>
+        <a href="#custom">Custom Design</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart">
+          Cart
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            African Heritage · Modern Fashion
+          </div>
+
+          <h1>
+            WEAR YOUR<br>
+            <span>TOTEM.</span>
+          </h1>
+
+          <p>
+            Your surname. Your animal. Your story.
+            Turn your heritage into a T-shirt made to stand out.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#collection" class="btn btn-primary">
+              Shop Collection
+            </a>
+
+            <a href="#custom" class="btn btn-outline">
+              Start Custom Order
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         TICKER
+    ========================= -->
+
+    <div class="ticker ticker--totems">
+      <div class="ticker-track">
+
+        <div class="ticker-group">
+          <div class="ticker-item">NCUBE · BABOON</div>
+          <div class="ticker-item">DUBE · ZEBRA</div>
+          <div class="ticker-item">NDLOVU · ELEPHANT</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+        </div>
+
+        <div class="ticker-group" aria-hidden="true">
+          <div class="ticker-item">NCUBE · BABOON</div>
+          <div class="ticker-item">DUBE · ZEBRA</div>
+          <div class="ticker-item">NDLOVU · ELEPHANT</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =========================
+         TICKER
+    ========================= -->
+
+    <div class="ticker ticker--families">
+      <div class="ticker-track">
+
+        <div class="ticker-group">
+          <div class="ticker-item">NYONI · MOYO</div>
+          <div class="ticker-item">GOMBO · SOKO</div>
+          <div class="ticker-item">SIBANDA · SHUMA</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+          <div class="ticker-item">POLL · NKOMO</div>
+          <div class="ticker-item">NKOMAZANA · MPOFU</div>
+          <div class="ticker-item">ZAKAYO · MATE</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+        </div>
+
+        <div class="ticker-group" aria-hidden="true">
+          <div class="ticker-item">NYONI · MOYO</div>
+          <div class="ticker-item">GOMBO · SOKO</div>
+          <div class="ticker-item">SIBANDA · SHUMA</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+          <div class="ticker-item">POLL · NKOMO</div>
+          <div class="ticker-item">NKOMAZANA · MPOFU</div>
+          <div class="ticker-item">ZAKAYO · MATE</div>
+          <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =========================
+         COLLECTION
+    ========================= -->
+
+    <section class="collection" id="collection">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div class="section-label">
+            The Collection
+          </div>
+
+          <h2>
+            Heritage, made wearable.
+          </h2>
+
+          <p>
+            Discover our signature totem-inspired T-shirts
+            designed for people who are proud of where they come from.
+          </p>
+
+        </div>
+
+
+        <div class="products">
+
+          <!-- PRODUCT 1 -->
+
+          <article class="product-card reveal">
+
+            <div class="product-image">
+              <img
+                src="images/ncube.png"
+                alt="Ncube Baboon T-shirt"
+                onerror="this.style.display='none'"
+              >
+
+              <div class="product-tag">
+                Signature
+              </div>
+
+              <button class="view-image-btn" type="button" aria-label="View full image: Ncube · Baboon">
+                View full image
+              </button>
+            </div>
+
+            <div class="product-info">
+
+              <h3>Ncube · Baboon</h3>
+
+              <p>
+                A bold design representing the Ncube totem.
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  $15
+                </span>
+
+                <button
+                  class="add-btn"
+                  onclick="addToCart('Ncube · Baboon T-Shirt', 15, 'images/ncube.png')"
+                >
+                  Add to Cart
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 2 -->
+
+          <article class="product-card reveal">
+
+            <div class="product-image">
+              <img
+                src="images/dube.png"
+                alt="Dube Zebra T-shirt"
+                onerror="this.style.display='none'"
+              >
+
+              <div class="product-tag">
+                Heritage
+              </div>
+
+              <button class="view-image-btn" type="button" aria-label="View full image: Dube · Zebra">
+                View full image
+              </button>
+            </div>
+
+            <div class="product-info">
+
+              <h3>Dube · Zebra</h3>
+
+              <p>
+                A clean zebra-inspired design for the Dube family.
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  $15
+                </span>
+
+                <button
+                  class="add-btn"
+                  onclick="addToCart('Dube · Zebra T-Shirt', 15, 'images/dube.png')"
+                >
+                  Add to Cart
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 3 -->
+
+          <article class="product-card reveal">
+
+            <div class="product-image">
+
+              <img
+                src="images/ndlovu.png"
+                alt="Ndlovu Elephant T-shirt"
+                onerror="this.style.display='none'"
+              >
+
+              <div class="product-tag">
+                Classic
+              </div>
+
+              <button class="view-image-btn" type="button" aria-label="View full image: Ndlovu · Elephant">
+                View full image
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <h3>Ndlovu · Elephant</h3>
+
+              <p>
+                A powerful elephant design inspired by heritage.
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  $15
+                </span>
+
+                <button
+                  class="add-btn"
+                  onclick="addToCart('Ndlovu · Elephant T-Shirt', 15, 'images/ndlovu.png')"
+                >
+                  Add to Cart
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOTEMS
+    ========================= -->
+
+    <section class="totems" id="totems">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            Explore Your Heritage
+          </div>
+
+          <h2>
+            Every totem tells a story.
+          </h2>
+
+          <p>
+            Choose your family totem or create something completely
+            personal with our custom design service.
+          </p>
+
+        </div>
+
+
+        <div class="totem-grid">
+
+          <article class="totem-card reveal">
+
+            <img
+              src="images/bab.png"
+              alt="Baboon totem"
+              onerror="this.style.display='none'"
+            >
+
+            <div class="totem-overlay">
+
+              <div class="totem-number">
+                01 · TOTEM
+              </div>
+
+              <h3>Ncube</h3>
+
+              <p>
+                Baboon
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="totem-card reveal">
+
+            <img
+              src="images/zaa.png"
+              alt="Zebra totem"
+              onerror="this.style.display='none'"
+            >
+
+            <div class="totem-overlay">
+
+              <div class="totem-number">
+                02 · TOTEM
+              </div>
+
+              <h3>Dube</h3>
+
+              <p>
+                Zebra
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="totem-card reveal">
+
+            <img
+              src="images/ele.png"
+              alt="Elephant totem"
+              onerror="this.style.display='none'"
+            >
+
+            <div class="totem-overlay">
+
+              <div class="totem-number">
+                03 · TOTEM
+              </div>
+
+              <h3>Ndlovu</h3>
+
+              <p>
+                Elephant
+              </p>
+
+            </div>
+
+          </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CUSTOM STUDIO
+    ========================= -->
+
+    <section class="studio" id="custom">
+
+      <div class="container">
+
+        <div class="studio-grid">
+
+          <div class="studio-text reveal">
+
+            <div class="section-label">
+              Custom Design Studio
+            </div>
+
+            <h2>
+              Make it<br>
+              yours.
+            </h2>
+
+            <p>
+              Tell us your surname, totem, animal and preferred
+              style. Our team will help turn your idea into a
+              unique T-shirt design.
+            </p>
+
+            <div class="studio-points">
+
+              <div class="studio-point">
+                <span>01</span>
+                Choose your surname or totem
+              </div>
+
+              <div class="studio-point">
+                <span>02</span>
+                Choose your animal
+              </div>
+
+              <div class="studio-point">
+                <span>03</span>
+                Select your shirt colour and size
+              </div>
+
+              <div class="studio-point">
+                <span>04</span>
+                Send your order directly to WhatsApp
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-card reveal">
+
+            <h3>Start Your Order</h3>
+
+            <p>
+              Complete the form and send your request.
+            </p>
+
+            <form id="customForm">
+
+              <div class="form-grid">
+
+                <div class="field">
+
+                  <label>
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Your name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label>
+                    Phone
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Your phone"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label>
+                    Surname / Totem
+                  </label>
+
+                  <input
+                    type="text"
+                    id="surname"
+                    placeholder="e.g. Ncube"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label>
+                    Animal
+                  </label>
+
+                  <input
+                    type="text"
+                    id="animal"
+                    placeholder="e.g. Baboon"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label>
+                    Shirt Colour
+                  </label>
+
+                  <select id="shirtColour">
+
+                    <option value="Black">
+                      Black
+                    </option>
+
+                    <option value="White">
+                      White
+                    </option>
+
+                    <option value="Brown">
+                      Brown
+                    </option>
+
+                    <option value="Cream">
+                      Cream
+                    </option>
+
+                    <option value="Other">
+                      Other
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="field">
+
+                  <label>
+                    Size
+                  </label>
+
+                  <select id="shirtSize">
+
+                    <option value="S">
+                      Small (S)
+                    </option>
+
+                    <option value="M">
+                      Medium (M)
+                    </option>
+
+                    <option value="L">
+                      Large (L)
+                    </option>
+
+                    <option value="XL">
+                      XL
+                    </option>
+
+                    <option value="XXL">
+                      XXL
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="field full">
+
+                  <label>
+                    Design Message
+                  </label>
+
+                  <textarea
+                    id="designMessage"
+                    placeholder="Tell us what you want on the T-shirt..."
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary form-submit"
+              >
+                Send Custom Order
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         TICKER
+    ========================= -->
+
+    <div class="ticker">
+      <div class="ticker-track">
+
+        <div class="ticker-item">NCUBE  · BABOON</div>
+        <div class="ticker-item">DUBE   · ZEBRA</div>
+        <div class="ticker-item">NDLOVU · ELEPHANT</div>
+        <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+
+        <div class="ticker-item">NCUBE  · BABOON</div>
+        <div class="ticker-item">DUBE   · ZEBRA</div>
+        <div class="ticker-item">NDLOVU · ELEPHANT</div>
+        <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+
+      </div>
+    </div>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image reveal">
+
+            <img
+              src="images/ele.png"
+              alt="Elephant in its natural habitat, representing the Ndlovu totem"
+              onerror="this.style.display='none'"
+            >
+
+          </div>
+
+
+          <div class="about-content reveal">
+
+            <div class="section-label">
+              Our Story
+            </div>
+
+            <h2>
+              More than a T-shirt.
+            </h2>
+
+            <p>
+              TOTEM THREADS was created around a simple idea:
+              your heritage deserves to be seen.
+            </p>
+
+            <p>
+              We create fashion inspired by African totems,
+              family names, animals and cultural identity.
+              Each design is made to help people wear their
+              story with pride.
+            </p>
+
+            <p>
+              From a traditional family totem to a completely
+              personal design, we bring identity and fashion
+              together.
+            </p>
+
+            <div class="owners">
+
+              <strong>
+                Mpofu James & Nkomazana Perfect
+              </strong>
+
+              <span>
+                Founders · TOTEM THREADS
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATEMENT
+    ========================= -->
+
+    <section class="statement">
+
+      <div class="container">
+
+        <div class="statement-content reveal">
+
+          <div class="section-label">
+            Our Philosophy
+          </div>
+
+          <h2>
+            Know your roots.<br>
+            <span>Wear your story.</span>
+          </h2>
+
+          <p>
+            TOTEM THREADS brings African heritage into modern
+            everyday fashion through meaningful custom designs.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-left reveal">
+
+            <div class="section-label">
+              Contact
+            </div>
+
+            <h2>
+              Let's create something meaningful.
+            </h2>
+
+            <p>
+              Have a question, custom idea or bulk order?
+              Get in touch with TOTEM THREADS.
+            </p>
+
+            <div class="contact-item">
+
+              <small>
+                Email
+              </small>
+
+              <strong>
+                <a href="mailto:mpofujames83@gmail.com">
+                  mpofujames83@gmail.com
+                </a>
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>
+                Phone
+              </small>
+
+              <strong>
+                <a
+                  href="https://wa.me/263788587669?text=Hello%20TOTEM%20THREADS"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  0788 587 669
+                </a>
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>
+                Founders
+              </small>
+
+              <strong>
+                Mpofu James & Nkomazana Perfect
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-box reveal">
+
+            <h3>
+              Ready to wear your totem?
+            </h3>
+
+            <p>
+              Start your custom order or contact us directly
+              through WhatsApp.
+            </p>
+
+            <div class="contact-buttons">
+
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/263788587669?text=Hello%20TOTEM%20THREADS%2C%20I%20would%20like%20to%20make%20a%20custom%20T-shirt."
+                target="_blank"
+                rel="noopener"
+              >
+                WhatsApp Us
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="mailto:mpofujames83@gmail.com"
+              >
+                Email Us
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="https://whatsapp.com/channel/0029VbDeFWE9sBIDH6xvkb28"
+                target="_blank"
+                rel="noopener"
+              >
+                Follow Our WhatsApp Channel
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="https://www.tiktok.com/@totemtreands?is_from_webapp=1&amp;sender_device=pc"
+                target="_blank"
+                rel="noopener"
+              >
+                Follow Us on TikTok
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <a href="#home" class="brand">
+
+            <img
+              src="images/logo.png"
+              alt="TOTEM THREADS"
+            >
+
+            <div class="brand-text">
+              TOTEM THREADS
+              <span>WEAR YOUR HERITAGE</span>
+            </div>
+
+          </a>
+
+          <p class="footer-about">
+            Premium custom T-shirts inspired by African
+            totems, surnames, animals and heritage.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="#collection">
+            Collection
+          </a>
+
+          <a href="#totems">
+            Totems
+          </a>
+
+          <a href="#custom">
+            Custom Design
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
+          <a href="#home">
+            Home
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Contact
+          </h4>
+
+          <a href="mailto:mpofujames83@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://wa.me/263788587669"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp Chat
+          </a>
+
+          <a
+            href="https://whatsapp.com/channel/0029VbDeFWE9sBIDH6xvkb28"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp Channel
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@totemtreands?is_from_webapp=1&amp;sender_device=pc"
+            target="_blank"
+            rel="noopener"
+          >
+            TikTok
+          </a>
+
+          <a
+            href="https://wa.me/263788587669?text=Hello%20TOTEM%20THREADS"
+            target="_blank"
+            rel="noopener"
+          >
+            0788 587 669
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 TOTEM THREADS. All rights reserved.
+        </span>
+
+        <span>
+          Wear Your Totem. Honour Your Heritage.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       CART OVERLAY
+  ========================= -->
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- =========================
+       CART
+  ========================= -->
+
+  <aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+      <h3>
+        Your Cart
+      </h3>
+
+      <button class="close-btn" id="closeCart">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+      <div class="empty-cart">
+        Your cart is empty.
+      </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+      <div class="summary-row">
+
+        <span>
+          Subtotal
+        </span>
+
+        <strong id="subtotal">
+          $0.00
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Delivery
+        </span>
+
+        <strong id="delivery">
+          $5.00
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="total">
+          $0.00
+        </strong>
+
+      </div>
+
+
+      <button
+        class="btn btn-primary checkout-btn"
+        id="checkoutBtn"
+      >
+        Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================
+       CHECKOUT MODAL
+  ========================= -->
+
+  <div class="modal" id="checkoutModal">
+
+    <div class="modal-card">
+
+      <div class="modal-top">
+
+        <h3>
+          Checkout
+        </h3>
+
+        <button
+          class="close-btn"
+          id="closeCheckout"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="checkout-summary">
+
+        <div class="summary-row">
+
+          <span>
+            Order
+          </span>
+
+          <strong id="checkoutSubtotal">
+            $0.00
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>
+            Delivery
+          </span>
+
+          <strong>
+            $5.00
+          </strong>
+
+        </div>
+
+        <div class="summary-row total">
+
+          <span>
+            Total
+          </span>
+
+          <strong id="checkoutTotal">
+            $0.00
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <form id="checkoutForm">
+
+        <div class="field">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="checkoutName"
+            placeholder="Your full name"
+            required
+          >
+
+        </div>
+
+
+        <div class="field" style="margin-top:14px;">
+
+          <label>
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="checkoutPhone"
+            placeholder="Your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="field" style="margin-top:14px;">
+
+          <label>
+            Payment Method
+          </label>
+
+          <div class="payment-options">
+
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="Cash"
+                checked
+              >
+              Cash
+            </label>
+
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="Cash-to-Cash"
+              >
+              Cash-to-Cash
+            </label>
+
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="EcoCash"
+              >
+              EcoCash
+            </label>
+
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="Visa/Mastercard"
+              >
+              Visa / Mastercard
+            </label>
+
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="PayPal"
+              >
+              PayPal
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary form-submit"
+        >
+          Complete Order
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       TOAST
+  ========================= -->
+
+  <dialog class="image-viewer" id="imageViewer" aria-labelledby="imageViewerCaption">
+    <button
+      class="image-viewer-close"
+      id="closeImageViewer"
+      type="button"
+      aria-label="Close full image"
+    >
+      ×
+    </button>
+    <figure class="image-viewer-content">
+      <img id="imageViewerImage" src="" alt="">
+      <figcaption id="imageViewerCaption"></figcaption>
+    </figure>
+  </dialog>
+
+  <div class="toast" id="toast">
+    Added to cart.
+  </div>
+
+
+  <!-- =========================
+       SCROLL TOP
+  ========================= -->
+
+  <button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Scroll to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* =========================
+       ELEMENTS
+    ========================= */
+
+    const cartPanel = document.getElementById("cartPanel");
+    const overlay = document.getElementById("overlay");
+    const openCart = document.getElementById("openCart");
+    const closeCart = document.getElementById("closeCart");
+    const checkoutBtn = document.getElementById("checkoutBtn");
+    const checkoutModal = document.getElementById("checkoutModal");
+    const closeCheckout = document.getElementById("closeCheckout");
+    const imageViewer = document.getElementById("imageViewer");
+    const imageViewerImage = document.getElementById("imageViewerImage");
+    const imageViewerCaption = document.getElementById("imageViewerCaption");
+    const closeImageViewer = document.getElementById("closeImageViewer");
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const subtotalElement = document.getElementById("subtotal");
+    const totalElement = document.getElementById("total");
+    const checkoutSubtotal = document.getElementById("checkoutSubtotal");
+    const checkoutTotal = document.getElementById("checkoutTotal");
+    const toast = document.getElementById("toast");
+
+    document.addEventListener("click", event => {
+      const button = event.target.closest(".view-image-btn");
+
+      if (!button) {
+        return;
+      }
+
+      const productCard = button.closest(".product-card");
+      const productImage = productCard.querySelector(".product-image img");
+      const productName = productCard.querySelector(".product-info h3").textContent.trim();
+
+      imageViewerImage.src = productImage.src;
+      imageViewerImage.alt = productImage.alt;
+      imageViewerCaption.textContent = productName;
+      imageViewer.showModal();
+    });
+
+    closeImageViewer.addEventListener("click", () => {
+      imageViewer.close();
+    });
+
+    imageViewer.addEventListener("click", event => {
+      if (event.target === imageViewer) {
+        imageViewer.close();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && imageViewer.open) {
+        imageViewer.close();
+      }
+    });
+
+
+    /* =========================
+       CART
+    ========================= */
+
+    let cart = JSON.parse(
+      localStorage.getItem("totemThreadsCart") || "[]"
+    );
+
+
+    function saveCart() {
+
+      localStorage.setItem(
+        "totemThreadsCart",
+        JSON.stringify(cart)
+      );
+
+    }
+
+
+    function addToCart(name, price, image) {
+
+      const existing = cart.find(
+        item => item.name === name
+      );
+
+      if (existing) {
+
+        existing.quantity += 1;
+
+      } else {
+
+        cart.push({
+          name,
+          price,
+          image,
+          quantity: 1
+        });
+
+      }
+
+      saveCart();
+      updateCart();
+
+      showToast(
+        `${name} added to your cart.`
+      );
+
+    }
+
+
+    function changeQuantity(index, amount) {
+
+      cart[index].quantity += amount;
+
+      if (cart[index].quantity <= 0) {
+
+        cart.splice(index, 1);
+
+      }
+
+      saveCart();
+      updateCart();
+
+    }
+
+
+    function removeItem(index) {
+
+      cart.splice(index, 1);
+
+      saveCart();
+      updateCart();
+
+    }
+
+
+    function updateCart() {
+
+      cartItems.innerHTML = "";
+
+      if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+          <div class="empty-cart">
+            Your cart is empty.
+          </div>
+        `;
+
+      } else {
+
+        cart.forEach((item, index) => {
+
+          const itemElement =
+            document.createElement("div");
+
+          itemElement.className = "cart-item";
+
+          itemElement.innerHTML = `
+
+            <div class="cart-item-image">
+
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+              >
+
+            </div>
+
+            <div>
+
+              <h4>
+                ${item.name}
+              </h4>
+
+              <div class="cart-item-price">
+                $${item.price.toFixed(2)}
+              </div>
+
+              <div class="qty-controls">
+
+                <button
+                  onclick="changeQuantity(${index}, -1)"
+                >
+                  −
+                </button>
+
+                <span>
+                  ${item.quantity}
+                </span>
+
+                <button
+                  onclick="changeQuantity(${index}, 1)"
+                >
+                  +
+                </button>
+
+              </div>
+
+              <button
+                class="remove-item"
+                onclick="removeItem(${index})"
+              >
+                REMOVE
+              </button>
+
+            </div>
+          `;
+
+          cartItems.appendChild(itemElement);
+
+        });
+
+      }
+
+
+      const subtotal =
+        cart.reduce(
+          (sum, item) =>
+            sum + item.price * item.quantity,
+          0
+        );
+
+
+      const delivery =
+        cart.length > 0 ? 5 : 0;
+
+
+      const total =
+        subtotal + delivery;
+
+
+      const count =
+        cart.reduce(
+          (sum, item) =>
+            sum + item.quantity,
+          0
+        );
+
+
+      cartCount.textContent = count;
+
+      subtotalElement.textContent =
+        `$${subtotal.toFixed(2)}`;
+
+      document.getElementById("delivery").textContent =
+        `$${delivery.toFixed(2)}`;
+
+      totalElement.textContent =
+        `$${total.toFixed(2)}`;
+
+      checkoutSubtotal.textContent =
+        `$${subtotal.toFixed(2)}`;
+
+      checkoutTotal.textContent =
+        `$${total.toFixed(2)}`;
+
+    }
+
+
+    /* =========================
+       CART PANEL
+    ========================= */
+
+    function openCartPanel() {
+
+      cartPanel.classList.add("active");
+      overlay.classList.add("active");
+
+    }
+
+
+    function closeCartPanel() {
+
+      cartPanel.classList.remove("active");
+      overlay.classList.remove("active");
+
+    }
+
+
+    openCart.addEventListener(
+      "click",
+      openCartPanel
+    );
+
+
+    closeCart.addEventListener(
+      "click",
+      closeCartPanel
+    );
+
+
+    overlay.addEventListener(
+      "click",
+      closeCartPanel
+    );
+
+
+    /* =========================
+       CHECKOUT
+    ========================= */
+
+    checkoutBtn.addEventListener(
+      "click",
+      () => {
+
+        if (cart.length === 0) {
+
+          showToast(
+            "Your cart is empty."
+          );
+
+          return;
+
+        }
+
+        checkoutModal.classList.add("active");
+
+      }
+    );
+
+
+    closeCheckout.addEventListener(
+      "click",
+      () => {
+
+        checkoutModal.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+
+    checkoutModal.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === checkoutModal
+        ) {
+
+          checkoutModal.classList.remove(
+            "active"
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       CHECKOUT ORDER
+    ========================= */
+
+    document
+      .getElementById("checkoutForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+          const name =
+            document.getElementById(
+              "checkoutName"
+            ).value.trim();
+
+          const phone =
+            document.getElementById(
+              "checkoutPhone"
+            ).value.trim();
+
+          const payment =
+            document.querySelector(
+              'input[name="payment"]:checked'
+            ).value;
+
+
+          let message =
+            "Hello TOTEM THREADS!%0A%0A";
+
+          message +=
+            "*NEW ORDER*%0A%0A";
+
+          message +=
+            `Name: ${encodeURIComponent(name)}%0A`;
+
+          message +=
+            `Phone: ${encodeURIComponent(phone)}%0A`;
+
+          message +=
+            `Payment: ${encodeURIComponent(payment)}%0A%0A`;
+
+          message +=
+            "*ITEMS*%0A";
+
+
+          cart.forEach(item => {
+
+            message +=
+              `- ${encodeURIComponent(item.name)} x${item.quantity} = $${(item.price * item.quantity).toFixed(2)}%0A`;
+
+          });
+
+
+          const subtotal =
+            cart.reduce(
+              (sum, item) =>
+                sum + item.price * item.quantity,
+              0
+            );
+
+
+          const total =
+            subtotal + 5;
+
+
+          message +=
+            `%0ASubtotal: $${subtotal.toFixed(2)}%0A`;
+
+          message +=
+            `Delivery: $5.00%0A`;
+
+          message +=
+            `*Total: $${total.toFixed(2)}*%0A`;
+
+
+          window.open(
+            `https://wa.me/263788587669?text=${message}`,
+            "_blank"
+          );
+
+
+          cart = [];
+
+          saveCart();
+          updateCart();
+
+          checkoutModal.classList.remove(
+            "active"
+          );
+
+          closeCartPanel();
+
+          showToast(
+            "Order sent to WhatsApp."
+          );
+
+        }
+      );
+
+
+    /* =========================
+       CUSTOM ORDER
+    ========================= */
+
+    document
+      .getElementById("customForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+
+          const name =
+            document.getElementById(
+              "customerName"
+            ).value.trim();
+
+          const phone =
+            document.getElementById(
+              "customerPhone"
+            ).value.trim();
+
+          const surname =
+            document.getElementById(
+              "surname"
+            ).value.trim();
+
+          const animal =
+            document.getElementById(
+              "animal"
+            ).value.trim();
+
+          const colour =
+            document.getElementById(
+              "shirtColour"
+            ).value;
+
+          const size =
+            document.getElementById(
+              "shirtSize"
+            ).value;
+
+          const design =
+            document.getElementById(
+              "designMessage"
+            ).value.trim();
+
+
+          let message =
+            "Hello TOTEM THREADS!%0A%0A";
+
+          message +=
+            "*CUSTOM T-SHIRT REQUEST*%0A%0A";
+
+          message +=
+            `Name: ${encodeURIComponent(name)}%0A`;
+
+          message +=
+            `Phone: ${encodeURIComponent(phone)}%0A`;
+
+          message +=
+            `Surname/Totem: ${encodeURIComponent(surname)}%0A`;
+
+          message +=
+            `Animal: ${encodeURIComponent(animal)}%0A`;
+
+          message +=
+            `Shirt Colour: ${encodeURIComponent(colour)}%0A`;
+
+          message +=
+            `Size: ${encodeURIComponent(size)}%0A`;
+
+          message +=
+            `Design Request: ${encodeURIComponent(design || "No additional message")}%0A`;
+
+
+          window.open(
+            `https://wa.me/263788587669?text=${message}`,
+            "_blank"
+          );
+
+
+          this.reset();
+
+          showToast(
+            "Custom order sent to WhatsApp."
+          );
+
+        }
+      );
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navMenu =
+      document.getElementById("navMenu");
+
+
+    menuBtn.addEventListener(
+      "click",
+      () => {
+
+        navMenu.classList.toggle("open");
+
+      }
+    );
+
+
+    document
+      .querySelectorAll("#navMenu a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navMenu.classList.remove(
+              "open"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    let toastTimer;
+
+
+    function showToast(message) {
+
+      toast.textContent = message;
+
+      toast.classList.add("show");
+
+      clearTimeout(toastTimer);
+
+      toastTimer = setTimeout(
+        () => {
+
+          toast.classList.remove(
+            "show"
+          );
+
+        },
+        3000
+      );
+
+    }
+
+
+    /* =========================
+       REVEAL ANIMATION
+    ========================= */
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+
+        observer.observe(element);
+
+      });
+
+
+    /* =========================
+       SCROLL TOP
+    ========================= */
+
+    const scrollTop =
+      document.getElementById(
+        "scrollTop"
+      );
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 600) {
+
+          scrollTop.classList.add(
+            "show"
+          );
+
+        } else {
+
+          scrollTop.classList.remove(
+            "show"
+          );
+
+        }
+
+      }
+    );
+
+
+    scrollTop.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    /* =========================
+       INITIALIZE
+    ========================= */
+
+    updateCart();
+
+  </script>
+
+    <!-- =========================
+         TICKER
+    ========================= -->
+
+    <div class="ticker">
+      <div class="ticker-track">
+
+        <div class="ticker-item">NCUBE · BABOON</div>
+        <div class="ticker-item">DUBE · ZEBRA</div>
+        <div class="ticker-item">NDLOVU · ELEPHANT</div>
+        <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+
+        <div class="ticker-item">NCUBE · BABOON</div>
+        <div class="ticker-item">DUBE · ZEBRA</div>
+        <div class="ticker-item">NDLOVU · ELEPHANT</div>
+        <div class="ticker-item">YOUR FAMILY · YOUR STORY</div>
+
+      </div>
+    </div>
+
+
+</body>
+</html>
