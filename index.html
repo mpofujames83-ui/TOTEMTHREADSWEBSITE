@@ -911,6 +911,27 @@
       margin-top: 18px;
     }
 
+    .custom-order-preview {
+      margin-top: 18px;
+      padding: 16px;
+      border-left: 3px solid var(--gold);
+      background: #eee9df;
+    }
+
+    .custom-order-preview strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .custom-order-preview p {
+      color: #514a42;
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
     /* =========================
        ABOUT
     ========================= */
@@ -2122,7 +2143,7 @@
             <div class="product-image">
 
               <img
-                src="images/ndlovu.png"
+                src="https://totemthreads.netlify.app/images/ndlovu.png"
                 alt="Ndlovu Elephant T-shirt"
                 onerror="this.style.display='none'"
               >
@@ -2153,7 +2174,7 @@
 
                 <button
                   class="add-btn"
-                  onclick="addToCart('Ndlovu · Elephant T-Shirt', 15, 'images/ndlovu.png')"
+                  onclick="addToCart('Ndlovu · Elephant T-Shirt', 15, 'https://totemthreads.netlify.app/images/ndlovu.png')"
                 >
                   Add to Cart
                 </button>
@@ -2477,16 +2498,21 @@
                 <div class="field full">
 
                   <label>
-                    Design Message
+                    Logo Colour and Design
                   </label>
 
                   <textarea
                     id="designMessage"
-                    placeholder="Tell us what you want on the T-shirt..."
+                    placeholder="Describe your logo colours and design..."
                   ></textarea>
 
                 </div>
 
+              </div>
+
+              <div class="custom-order-preview" aria-live="polite">
+                <strong>WhatsApp message preview</strong>
+                <p id="customOrderPreview"></p>
               </div>
 
               <button
@@ -2718,7 +2744,7 @@
 
               <a
                 class="btn btn-primary"
-                href="https://wa.me/263788587669?text=Hello%20TOTEM%20THREADS%2C%20I%20would%20like%20to%20make%20a%20custom%20T-shirt."
+                href="https://wa.me/263788587669?text=Hello%20TOTEM%20THREADS%2C%20I%20would%20like%20to%20make%20a%20custom%20T-shirt.%0A%0ASurname%2FTotem%3A%20___%20%7C%20Colour%3A%20___%20%7C%20Size%3A%20___%0ALogo%20colour%20and%20design%3A%20___%0A%F0%9F%93%9E%20Order%20via%20WhatsApp%3A%20%2B263%20788%20587%20669%20%E2%9D%A4%EF%B8%8F"
                 target="_blank"
                 rel="noopener"
               >
@@ -3660,6 +3686,35 @@
        CUSTOM ORDER
     ========================= */
 
+    const customOrderPreview =
+      document.getElementById("customOrderPreview");
+
+    function updateCustomOrderPreview() {
+      const surname =
+        document.getElementById("surname").value.trim() || "___";
+
+      const colour =
+        document.getElementById("shirtColour").value;
+
+      const size =
+        document.getElementById("shirtSize").selectedOptions[0].textContent.trim();
+
+      const design =
+        document.getElementById("designMessage").value.trim() || "___";
+
+      customOrderPreview.textContent =
+        `Hello TOTEM THREADS, I would like to make a custom T-shirt.\n\nSurname/Totem: ${surname} | Colour: ${colour} | Size: ${size}\nLogo colour and design: ${design}`;
+    }
+
+    document
+      .querySelectorAll("#surname, #shirtColour, #shirtSize, #designMessage")
+      .forEach(field => {
+        field.addEventListener("input", updateCustomOrderPreview);
+        field.addEventListener("change", updateCustomOrderPreview);
+      });
+
+    updateCustomOrderPreview();
+
     document
       .getElementById("customForm")
       .addEventListener(
@@ -3706,10 +3761,10 @@
 
 
           let message =
-            "Hello TOTEM THREADS!%0A%0A";
+            "Hello TOTEM THREADS, I would like to make a custom T-shirt.%0A%0A";
 
           message +=
-            "*CUSTOM T-SHIRT REQUEST*%0A%0A";
+            "*CUSTOM T-SHIRT ORDER*%0A%0A";
 
           message +=
             `Name: ${encodeURIComponent(name)}%0A`;
@@ -3721,16 +3776,19 @@
             `Surname/Totem: ${encodeURIComponent(surname)}%0A`;
 
           message +=
-            `Animal: ${encodeURIComponent(animal)}%0A`;
+            `Totem animal: ${encodeURIComponent(animal)}%0A`;
 
           message +=
-            `Shirt Colour: ${encodeURIComponent(colour)}%0A`;
+            `Colour: ${encodeURIComponent(colour)}%0A`;
 
           message +=
             `Size: ${encodeURIComponent(size)}%0A`;
 
           message +=
-            `Design Request: ${encodeURIComponent(design || "No additional message")}%0A`;
+            `Logo colour and design: ${encodeURIComponent(design || "To be discussed")}%0A%0A`;
+
+          message +=
+            encodeURIComponent("Order via WhatsApp: +263 788 587 669");
 
 
           window.open(
