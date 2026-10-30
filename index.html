@@ -24,16 +24,16 @@
 
   <style>
     :root {
-      --black: #0d0b09;
+      --black: #17130f;
       --dark: #17130f;
+      --green: #315b3b;
       --brown: #6f4e37;
-      --brown-dark: #4b3324;
       --gold: #c58b2a;
-      --gold-light: #e2b65c;
+      --gold-light: #c58b2a;
       --cream: #f7f4ed;
-      --cream-dark: #ebe5d8;
+      --cream-dark: #f7f4ed;
       --white: #ffffff;
-      --muted: #8d877f;
+      --muted: #f7f4ed;
       --border: rgba(255,255,255,0.12);
       --shadow: 0 25px 70px rgba(0,0,0,0.18);
       --radius: 22px;
@@ -639,7 +639,7 @@
 
     .image-viewer figcaption {
       padding-top: 14px;
-      color: #e2b65c;
+      color: var(--gold);
       font-family: "Playfair Display", serif;
       font-size: 20px;
       text-align: center;
@@ -777,7 +777,7 @@
     }
 
     .totem-card p {
-      color: #d0cbc4;
+      color: var(--cream);
       font-size: 14px;
       font-weight: 400;
       text-transform: uppercase;
@@ -998,6 +998,45 @@
       text-align: center;
     }
 
+    .stories {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .story-card {
+      min-height: 230px;
+      padding: 28px;
+      border: 1px solid rgba(197, 139, 42, .3);
+      border-radius: 16px;
+      background: var(--black);
+    }
+
+    .story-card h3 {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+    }
+
+    .story-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .story-card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
     .statement-content {
       max-width: 900px;
       margin: auto;
@@ -1094,7 +1133,7 @@
     ========================= */
 
     footer {
-      background: #0a0807;
+      background: var(--black);
       color: white;
       padding: 65px 0 25px;
     }
@@ -1511,7 +1550,7 @@
 
       nav a {
         padding: 14px 0;
-        border-bottom: 1px solid rgba(213, 18, 18, 0.08);
+        border-bottom: 1px solid rgba(197, 139, 42, .16);
       }
 
       .menu-btn {
@@ -1543,7 +1582,8 @@
       }
 
       .products,
-      .totem-grid {
+      .totem-grid,
+      .story-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1702,7 +1742,7 @@
     }
 
     .collection {
-      background: linear-gradient(180deg, #fbf9f4 0%, var(--cream) 100%);
+      background: var(--black);
     }
 
     .products {
@@ -1764,7 +1804,7 @@
     }
 
     .about {
-      background: #fbf9f4;
+      background: var(--black);
     }
 
     .about-image {
@@ -1870,6 +1910,404 @@
         padding: 8px 20px;
       }
     }
+
+    /* Official TT brand theme */
+    body {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    header {
+      background: rgba(23, 19, 15, .96);
+      border-bottom-color: rgba(197, 139, 42, .28);
+    }
+
+    .brand-text,
+    nav a,
+    .cart-btn,
+    .menu-btn {
+      color: var(--cream);
+    }
+
+    .brand-text span,
+    nav a:hover,
+    nav a:focus-visible,
+    .footer-column a:hover {
+      color: var(--gold);
+    }
+
+    .cart-btn:hover,
+    .menu-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .cart-count,
+    .btn-primary,
+    .add-btn:hover,
+    .view-image-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .hero {
+      background-image:
+        linear-gradient(90deg, rgba(23, 19, 15, .94), rgba(23, 19, 15, .68) 58%, rgba(23, 19, 15, .38)),
+        url("images/ncube.png");
+      background-color: var(--black);
+      color: var(--cream);
+    }
+
+    .hero::after {
+      background: linear-gradient(transparent, var(--black));
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      font-size: clamp(38px, 6.4vw, 82px);
+      letter-spacing: -.045em;
+      line-height: 1.03;
+      color: var(--cream);
+    }
+
+    .hero h1 span,
+    .hero-slogan {
+      color: var(--gold);
+    }
+
+    .hero-slogan {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      margin: 0 0 14px;
+    }
+
+    .hero-description {
+      color: var(--cream);
+    }
+
+    .btn-primary:hover,
+    .add-btn:hover,
+    .view-image-btn:hover {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .btn-outline {
+      color: var(--cream);
+      background: transparent;
+      border-color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .ticker,
+    .ticker--totems,
+    .ticker--families {
+      color: var(--gold);
+      background: var(--black);
+      border-top: 1px solid rgba(197, 139, 42, .35);
+      border-bottom: 1px solid rgba(197, 139, 42, .35);
+    }
+
+    .ticker--totems::before,
+    .ticker--families::before {
+      background: linear-gradient(90deg, var(--black), transparent);
+    }
+
+    .ticker--totems::after,
+    .ticker--families::after {
+      background: linear-gradient(270deg, var(--black), transparent);
+    }
+
+    section,
+    .collection,
+    .about,
+    .contact,
+    .totems,
+    .studio,
+    .statement {
+      background-color: var(--black);
+      color: var(--cream);
+    }
+
+    .collection {
+      background-image: none;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .studio-text h2,
+    .contact-left h2,
+    .product-info h3,
+    .contact-box h3,
+    .form-card h3,
+    .statement h2 {
+      color: var(--cream);
+    }
+
+    .section-label,
+    .section-heading p,
+    .about-content > p,
+    .totems .section-heading p,
+    .product-info p,
+    .owners span,
+    .studio-text p,
+    .contact-left > p,
+    .footer-about {
+      color: var(--muted);
+    }
+
+    .form-card > p,
+    .totem-card p,
+    .remove-item {
+      color: var(--cream);
+    }
+
+    .section-label,
+    .product-tag,
+    .totem-number,
+    .footer-column h4,
+    .studio-point span,
+    .contact-item small {
+      color: var(--gold);
+    }
+
+    .product-card,
+    .form-card,
+    .owners,
+    .contact-box,
+    .custom-order-preview,
+    .cart-panel,
+    .modal-card {
+      background: var(--black);
+      color: var(--cream);
+      border: 1px solid rgba(197, 139, 42, .22);
+    }
+
+    .product-card {
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .24);
+    }
+
+    .totem-card {
+      border: 1px solid rgba(49, 91, 59, .55);
+      background: var(--black);
+    }
+
+    .totem-card:hover {
+      border-color: var(--green);
+    }
+
+    .product-card:hover {
+      box-shadow: 0 22px 50px rgba(0, 0, 0, .42);
+      border-color: rgba(197, 139, 42, .6);
+    }
+
+    .product-image {
+      background: var(--black);
+    }
+
+    .product-image img {
+      object-fit: contain;
+    }
+
+    .view-image-btn,
+    .add-btn,
+    .cart-btn,
+    .menu-btn {
+      border-color: rgba(197, 139, 42, .65);
+    }
+
+    .product-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .product-options label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .product-options select {
+      min-width: 0;
+      padding: 9px 10px;
+      border: 1px solid rgba(197, 139, 42, .35);
+      border-radius: 8px;
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .studio {
+      border-block: 1px solid rgba(197, 139, 42, .24);
+    }
+
+    .studio-text p,
+    .studio-point {
+      color: var(--cream);
+    }
+
+    .field label {
+      color: var(--cream);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      border-color: rgba(197, 139, 42, .34);
+      background: var(--black);
+      color: var(--cream);
+      color-scheme: dark;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: var(--muted);
+      opacity: .8;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(197, 139, 42, .18);
+    }
+
+    .custom-order-preview {
+      border-left-color: var(--gold);
+    }
+
+    .custom-order-preview p {
+      color: var(--cream);
+    }
+
+    .owners {
+      border-left-color: var(--gold);
+    }
+
+    .about-image {
+      background: var(--black);
+      border: 1px solid rgba(197, 139, 42, .3);
+    }
+
+    .statement {
+      background-image:
+        linear-gradient(rgba(23, 19, 15, .82), rgba(23, 19, 15, .92)),
+        url("images/zaa.png");
+      color: var(--cream);
+    }
+
+    .statement p,
+    .contact-box p {
+      color: var(--muted);
+    }
+
+    .contact-item strong,
+    .contact-item a,
+    .contact-buttons .btn {
+      color: var(--cream);
+    }
+
+    .contact-item a:hover {
+      color: var(--gold);
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      border-top: 1px solid rgba(197, 139, 42, .3);
+    }
+
+    .footer-grid {
+      border-bottom-color: rgba(197, 139, 42, .24);
+    }
+
+    .footer-column a,
+    .footer-bottom {
+      color: var(--muted);
+    }
+
+    .cart-panel {
+      border-radius: 0;
+    }
+
+    .cart-header,
+    .cart-item,
+    .summary-row.total {
+      border-color: rgba(197, 139, 42, .25);
+    }
+
+    .cart-header h3,
+    .cart-item h4,
+    .summary-row,
+    .summary-row strong,
+    .qty-controls span,
+    .modal-top h3 {
+      color: var(--cream);
+    }
+
+    .cart-footer,
+    .checkout-summary,
+    .payment-option {
+      background: var(--black);
+      color: var(--cream);
+      border-color: rgba(197, 139, 42, .25);
+    }
+
+    .empty-cart,
+    .cart-item-price {
+      color: var(--muted);
+    }
+
+    .close-btn,
+    .qty-controls button {
+      border-color: rgba(197, 139, 42, .45);
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .modal {
+      background: rgba(0, 0, 0, .82);
+    }
+
+    .checkout-summary .summary-row.total {
+      border-top-color: rgba(197, 139, 42, .25);
+    }
+
+    .toast {
+      background: var(--black);
+      color: var(--cream);
+      border-left-color: var(--gold);
+    }
+
+    .scroll-top {
+      background: var(--black);
+      color: var(--gold);
+    }
+
+    .image-viewer {
+      background: var(--black);
+      border-color: rgba(197, 139, 42, .45);
+      color: var(--cream);
+    }
+
+    @media (max-width: 760px) {
+      .hero h1 {
+        font-size: clamp(36px, 9vw, 56px);
+      }
+
+      .product-options {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -1896,6 +2334,7 @@
         <a href="#totems">Totems</a>
         <a href="#custom">Custom Design</a>
         <a href="#about">About</a>
+        <a href="#stories">Stories</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -1905,7 +2344,7 @@
           <span class="cart-count" id="cartCount">0</span>
         </button>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
           ☰
         </button>
       </div>
@@ -1925,16 +2364,16 @@
 
         <div class="hero-content reveal">
 
-          <div class="eyebrow">
-            African Heritage · Modern Fashion
-          </div>
-
           <h1>
-            WEAR YOUR<br>
-            <span>TOTEM.</span>
+            AFRICAN HERITAGE<br>
+            <span>• MODERN FASHION</span>
           </h1>
 
-          <p>
+          <p class="hero-slogan">
+            Wear Your Totem. Honour Your Heritage.
+          </p>
+
+          <p class="hero-description">
             Your surname. Your animal. Your story.
             Turn your heritage into a T-shirt made to stand out.
           </p>
@@ -2049,6 +2488,8 @@
               <img
                 src="images/ncube.png"
                 alt="Ncube Baboon T-shirt"
+                loading="lazy"
+                decoding="async"
                 onerror="this.style.display='none'"
               >
 
@@ -2069,6 +2510,29 @@
                 A bold design representing the Ncube totem.
               </p>
 
+              <div class="product-options">
+                <label for="ncube-size">
+                  Size
+                  <select id="ncube-size" class="product-size">
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </label>
+                <label for="ncube-colour">
+                  Shirt colour
+                  <select id="ncube-colour" class="product-colour">
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Brown</option>
+                    <option>Heritage Green</option>
+                  </select>
+                </label>
+              </div>
+
               <div class="product-bottom">
 
                 <span class="price">
@@ -2077,7 +2541,7 @@
 
                 <button
                   class="add-btn"
-                  onclick="addToCart('Ncube · Baboon T-Shirt', 15, 'images/ncube.png')"
+                  onclick="addToCart('Ncube · Baboon T-Shirt', 15, 'images/ncube.png', this)"
                 >
                   Add to Cart
                 </button>
@@ -2097,6 +2561,8 @@
               <img
                 src="images/dube.png"
                 alt="Dube Zebra T-shirt"
+                loading="lazy"
+                decoding="async"
                 onerror="this.style.display='none'"
               >
 
@@ -2117,6 +2583,29 @@
                 A clean zebra-inspired design for the Dube family.
               </p>
 
+              <div class="product-options">
+                <label for="dube-size">
+                  Size
+                  <select id="dube-size" class="product-size">
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </label>
+                <label for="dube-colour">
+                  Shirt colour
+                  <select id="dube-colour" class="product-colour">
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Brown</option>
+                    <option>Heritage Green</option>
+                  </select>
+                </label>
+              </div>
+
               <div class="product-bottom">
 
                 <span class="price">
@@ -2125,7 +2614,7 @@
 
                 <button
                   class="add-btn"
-                  onclick="addToCart('Dube · Zebra T-Shirt', 15, 'images/dube.png')"
+                  onclick="addToCart('Dube · Zebra T-Shirt', 15, 'images/dube.png', this)"
                 >
                   Add to Cart
                 </button>
@@ -2144,8 +2633,10 @@
             <div class="product-image">
 
               <img
-                src="https://totemthreads.netlify.app/images/ndlovu.png"
+                src="images/ndlovu.png"
                 alt="Ndlovu Elephant T-shirt"
+                loading="lazy"
+                decoding="async"
                 onerror="this.style.display='none'"
               >
 
@@ -2167,6 +2658,29 @@
                 A powerful elephant design inspired by heritage.
               </p>
 
+              <div class="product-options">
+                <label for="ndlovu-size">
+                  Size
+                  <select id="ndlovu-size" class="product-size">
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </label>
+                <label for="ndlovu-colour">
+                  Shirt colour
+                  <select id="ndlovu-colour" class="product-colour">
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Brown</option>
+                    <option>Heritage Green</option>
+                  </select>
+                </label>
+              </div>
+
               <div class="product-bottom">
 
                 <span class="price">
@@ -2175,7 +2689,7 @@
 
                 <button
                   class="add-btn"
-                  onclick="addToCart('Ndlovu · Elephant T-Shirt', 15, 'https://totemthreads.netlify.app/images/ndlovu.png')"
+                  onclick="addToCart('Ndlovu · Elephant T-Shirt', 15, 'images/ndlovu.png', this)"
                 >
                   Add to Cart
                 </button>
@@ -2226,6 +2740,8 @@
             <img
               src="images/bab.png"
               alt="Baboon totem"
+              loading="lazy"
+              decoding="async"
               onerror="this.style.display='none'"
             >
 
@@ -2251,6 +2767,8 @@
             <img
               src="images/zaa.png"
               alt="Zebra totem"
+              loading="lazy"
+              decoding="async"
               onerror="this.style.display='none'"
             >
 
@@ -2276,6 +2794,8 @@
             <img
               src="images/ele.png"
               alt="Elephant totem"
+              loading="lazy"
+              decoding="async"
               onerror="this.style.display='none'"
             >
 
@@ -2368,7 +2888,7 @@
 
                 <div class="field">
 
-                  <label>
+                  <label for="customerName">
                     Full Name
                   </label>
 
@@ -2384,7 +2904,7 @@
 
                 <div class="field">
 
-                  <label>
+                  <label for="customerPhone">
                     Phone
                   </label>
 
@@ -2400,14 +2920,29 @@
 
                 <div class="field">
 
-                  <label>
-                    Surname / Totem
+                  <label for="surname">
+                    Surname
                   </label>
 
                   <input
                     type="text"
                     id="surname"
-                    placeholder="e.g. Ncube"
+                    placeholder="e.g. Ndlovu"
+                    required
+                  >
+
+                </div>
+
+                <div class="field">
+
+                  <label for="totem">
+                    Family Totem
+                  </label>
+
+                  <input
+                    type="text"
+                    id="totem"
+                    placeholder="Your family totem"
                     required
                   >
 
@@ -2416,8 +2951,8 @@
 
                 <div class="field">
 
-                  <label>
-                    Animal
+                  <label for="animal">
+                    Animal Symbol
                   </label>
 
                   <input
@@ -2432,7 +2967,7 @@
 
                 <div class="field">
 
-                  <label>
+                  <label for="shirtColour">
                     Shirt Colour
                   </label>
 
@@ -2450,9 +2985,13 @@
                       Brown
                     </option>
 
+                    <option value="Heritage Green">
+                      Heritage Green
+                    </option>
+
                     <option value="Cream">
                       Cream
-                    </option>
+                            </option>
 
                     <option value="Other">
                       Other
@@ -2465,7 +3004,7 @@
 
                 <div class="field">
 
-                  <label>
+                  <label for="shirtSize">
                     Size
                   </label>
 
@@ -2496,15 +3035,31 @@
                 </div>
 
 
+                <div class="field">
+
+                  <label for="logoColour">
+                    Logo Colour
+                  </label>
+
+                  <select id="logoColour">
+                    <option value="Gold">Gold</option>
+                    <option value="Cream">Cream</option>
+                    <option value="White">White</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Heritage Green">Heritage Green</option>
+                  </select>
+
+                </div>
+
                 <div class="field full">
 
-                  <label>
-                    Logo Colour and Design
+                  <label for="designMessage">
+                    Design Details
                   </label>
 
                   <textarea
                     id="designMessage"
-                    placeholder="Describe your logo colours and design..."
+                    placeholder="Share any other details about your design..."
                   ></textarea>
 
                 </div>
@@ -2570,6 +3125,8 @@
             <img
               src="images/ele.png"
               alt="Elephant in its natural habitat, representing the Ndlovu totem"
+              loading="lazy"
+              decoding="async"
               onerror="this.style.display='none'"
             >
 
@@ -2622,6 +3179,51 @@
 
       </div>
 
+    </section>
+
+
+    <!-- =========================
+         STORIES
+    ========================= -->
+
+    <section class="stories" id="stories">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="section-label">Stories & Heritage</div>
+          <h2>Every identity has a story.</h2>
+          <p>
+            TOTEM THREADS brings together family identity, cultural heritage
+            and modern fashion without losing sight of the people behind each design.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card reveal">
+            <h3>Our journey</h3>
+            <p>
+              TOTEM THREADS began with a simple idea: heritage deserves to be seen.
+              We turn surnames, totems and animal symbols into wearable designs.
+            </p>
+          </article>
+
+          <article class="story-card reveal">
+            <h3>Our founders</h3>
+            <p>
+              Mpofu James and Nkomazana Perfect founded TOTEM THREADS around
+              the belief that personal identity and fashion belong together.
+            </p>
+          </article>
+
+          <article class="story-card reveal">
+            <h3>Your story</h3>
+            <p>
+              Every custom design starts with your surname, totem and ideas.
+              Share what you would like to wear and make the design your own.
+            </p>
+            <a href="#custom">Create a custom design</a>
+          </article>
+        </div>
+      </div>
     </section>
 
 
@@ -2842,6 +3444,10 @@
             Custom Design
           </a>
 
+          <a href="#stories">
+            Stories
+          </a>
+
         </div>
 
 
@@ -2853,6 +3459,10 @@
 
           <a href="#about">
             About
+          </a>
+
+          <a href="#stories">
+            Stories
           </a>
 
           <a href="#contact">
@@ -3087,7 +3697,7 @@
 
         <div class="field">
 
-          <label>
+          <label for="checkoutName">
             Full Name
           </label>
 
@@ -3103,7 +3713,7 @@
 
         <div class="field" style="margin-top:14px;">
 
-          <label>
+          <label for="checkoutPhone">
             Phone Number
           </label>
 
@@ -3309,10 +3919,13 @@
     }
 
 
-    function addToCart(name, price, image) {
+    function addToCart(name, price, image, button) {
+      const productInfo = button.closest(".product-info");
+      const size = productInfo.querySelector(".product-size").value;
+      const colour = productInfo.querySelector(".product-colour").value;
 
       const existing = cart.find(
-        item => item.name === name
+        item => item.name === name && item.size === size && item.colour === colour
       );
 
       if (existing) {
@@ -3325,6 +3938,8 @@
           name,
           price,
           image,
+          size,
+          colour,
           quantity: 1
         });
 
@@ -3406,6 +4021,10 @@
 
               <div class="cart-item-price">
                 $${item.price.toFixed(2)}
+              </div>
+
+              <div class="cart-item-price">
+                Size: ${item.size || "—"} · Colour: ${item.colour || "—"}
               </div>
 
               <div class="qty-controls">
@@ -3631,7 +4250,7 @@
           cart.forEach(item => {
 
             message +=
-              `- ${encodeURIComponent(item.name)} x${item.quantity} = $${(item.price * item.quantity).toFixed(2)}%0A`;
+              `- ${encodeURIComponent(item.name)} (${encodeURIComponent(item.size || "Size not selected")}, ${encodeURIComponent(item.colour || "Colour not selected")}) x${item.quantity} = $${(item.price * item.quantity).toFixed(2)}%0A`;
 
           });
 
@@ -3694,21 +4313,27 @@
       const surname =
         document.getElementById("surname").value.trim() || "___";
 
+      const totem =
+        document.getElementById("totem").value.trim() || "___";
+
       const colour =
         document.getElementById("shirtColour").value;
 
       const size =
         document.getElementById("shirtSize").selectedOptions[0].textContent.trim();
 
+      const logoColour =
+        document.getElementById("logoColour").value;
+
       const design =
         document.getElementById("designMessage").value.trim() || "___";
 
       customOrderPreview.textContent =
-        `Hello TOTEM THREADS, I would like to make a custom T-shirt.\n\nSurname/Totem: ${surname} | Colour: ${colour} | Size: ${size}\nLogo colour and design: ${design}`;
+        `Hello TOTEM THREADS, I would like to make a custom T-shirt.\n\nSurname: ${surname} | Totem: ${totem} | Animal: ${document.getElementById("animal").value.trim() || "___"} | Shirt colour: ${colour} | Size: ${size}\nLogo colour: ${logoColour} | Design details: ${design}`;
     }
 
     document
-      .querySelectorAll("#surname, #shirtColour, #shirtSize, #designMessage")
+      .querySelectorAll("#surname, #totem, #animal, #shirtColour, #shirtSize, #logoColour, #designMessage")
       .forEach(field => {
         field.addEventListener("input", updateCustomOrderPreview);
         field.addEventListener("change", updateCustomOrderPreview);
@@ -3740,6 +4365,11 @@
               "surname"
             ).value.trim();
 
+          const totem =
+            document.getElementById(
+              "totem"
+            ).value.trim();
+
           const animal =
             document.getElementById(
               "animal"
@@ -3753,6 +4383,11 @@
           const size =
             document.getElementById(
               "shirtSize"
+            ).value;
+
+          const logoColour =
+            document.getElementById(
+              "logoColour"
             ).value;
 
           const design =
@@ -3774,7 +4409,10 @@
             `Phone: ${encodeURIComponent(phone)}%0A`;
 
           message +=
-            `Surname/Totem: ${encodeURIComponent(surname)}%0A`;
+            `Surname: ${encodeURIComponent(surname)}%0A`;
+
+          message +=
+            `Family totem: ${encodeURIComponent(totem)}%0A`;
 
           message +=
             `Totem animal: ${encodeURIComponent(animal)}%0A`;
@@ -3786,7 +4424,10 @@
             `Size: ${encodeURIComponent(size)}%0A`;
 
           message +=
-            `Logo colour and design: ${encodeURIComponent(design || "To be discussed")}%0A%0A`;
+            `Logo colour: ${encodeURIComponent(logoColour)}%0A`;
+
+          message +=
+            `Design details: ${encodeURIComponent(design || "To be discussed")}%0A%0A`;
 
           message +=
             encodeURIComponent("Order via WhatsApp: +263 788 587 669");
@@ -3823,7 +4464,9 @@
       "click",
       () => {
 
-        navMenu.classList.toggle("open");
+        const isOpen = navMenu.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 
       }
     );
@@ -3840,6 +4483,8 @@
             navMenu.classList.remove(
               "open"
             );
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open menu");
 
           }
         );
